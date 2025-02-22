@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TP2</string>
+    <string name="Exo1_title">Mes capteurs</string>
+    <string name="hub_title">Les Capteurs</string>
+    <string name="hub_exercice1_sensorList">Exercice 1 : Liste de capteurs</string>
+    <string name="hub_exercice2">Exercice 2 : Détection de présence/absence de capteurs</string>
+    <string name="hub_exercice3">Exercice 3 : Accéléromètre</string>
+    <string name="hub_exercice4">Exercice 4 : Direction</string>
+    <string name="hub_exercice5">Exercice 5 : Secouer un appareil</string>
+    <string name="hub_exercice6">Exercice 6 : Proximité</string>
+    <string name="hub_exercice7">Exercice 7 : Géolocalisation</string>
+    <string name="Exo2_title">Détection de présence/absence de capteurs</string>
+    <string name="hub_exercice8">Exercice 8 : Activité</string>
+    <string name="hub_exercice9">Exercice 9 : Fragment</string>
+    <string name="Exo3_title">Accéléromètre</string>
+    <string name="Exo3_absence_capteur">L\'accéléromètre n\'est pas présent</string>
+    <string name="Exo3_Mouvement_intense">Mouvement très intense</string>
+    <string name="Exo3_Mouvement_moyen">Mouvement moyen</string>
+    <string name="Exo3_Mouvement_faible_stable">Mouvement faible ou stable</string>
+    <string name="Exo3_Pas_mouvement">Pas de mouvement</string>
+    <string name="Exo2_capteur">Le capteur</string>
+    <string name="Exo2_pas_present">" n'est pas présent"</string>
+    <string name="Exo2_present">Les capteurs sont présents</string>
+    <string name="Exo4_acce_pas_present">L\'accéléromètre n\'est pas présent</string>
+    <string name="Exo4_gauche">Gauche</string>
+    <string name="Exo4_droite">Droite</string>
+    <string name="Exo4_haut">Haut</string>
+    <string name="Exo4_bas">Bas</string>
+    <string name="Exo4_avant">Avant</string>
+    <string name="Exo4_arriere">Arrière</string>
+    <string name="Exo4_pas_dir">Aucune direction</string>
+    <string name="Exo5_title">Secouer un appareil</string>
+    <string name="Exo5_pas_flash">Pas de Flash</string>
+    <string name="Exo5_Flash_off">Lampe de poche éteinte</string>
+    <string name="Exo5_Flash_on">Lampe de poche allumée</string>
+    <string name="Exo6_title">Capteur de proximité</string>
+    <string name="Exo6_pas_prox">Le capteur de proximité n\'est pas présent</string>
+    <string name="Exo7_title">Géolocalisation</string>
+    <string name="Exo7_no_gps">GPS non activé</string>
+    <string name="Exo7_permission_granted">Autorisation accordée</string>
+    <string name="Exo9_title">Liste des pays</string>
+    <string name="Country_item_text">Nom du pays</string>
+</resources>

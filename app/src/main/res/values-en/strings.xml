@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TP2</string>
+    <string name="Exo1_title">My sensors</string>
+    <string name="hub_title">Sensors</string>
+    <string name="hub_exercice1_sensorList">Exercise 1: List of sensors</string>
+    <string name="hub_exercice2">Exercise 2: Detection of presence/absence of sensors</string>
+    <string name="hub_exercice3">Exercise 3: Accelerometer</string>
+    <string name="hub_exercice4">Exercise 4: Direction</string>
+    <string name="hub_exercice5">Exercise 5: Shake a device</string>
+    <string name="hub_exercice6">Exercise 6: Proximity</string>
+    <string name="hub_exercice7">Exercise 7: Geolocation</string>
+    <string name="Exo2_title">Detection of presence/absence of sensors</string>
+    <string name="hub_exercice8">Exercise 8: Activity</string>
+    <string name="hub_exercice9">Exercise 9: Fragment</string>
+    <string name="Exo3_title">Accelerometer</string>
+    <string name="Exo3_absence_capteur">The accelerometer is not present</string>
+    <string name="Exo3_Mouvement_intense">Very intense movement</string>
+    <string name="Exo3_Mouvement_moyen">Average movement</string>
+    <string name="Exo3_Mouvement_faible_stable">Weak or stable movement</string>
+    <string name="Exo3_Pas_mouvement">No movement</string>
+    <string name="Exo2_capteur">The sensor</string>
+    <string name="Exo2_pas_present">is not present</string>
+    <string name="Exo2_present">The sensors are present</string>
+    <string name="Exo4_acce_pas_present">The accelerometer is not present</string>
+    <string name="Exo4_gauche">LEFT</string>
+    <string name="Exo4_droite">RIGHT</string>
+    <string name="Exo4_haut">UP</string>
+    <string name="Exo4_bas">DOWN</string>
+    <string name="Exo4_avant">FRONT</string>
+    <string name="Exo4_arriere">REAR</string>
+    <string name="Exo4_pas_dir">No direction</string>
+    <string name="Exo5_title">Shake a device</string>
+    <string name="Exo5_pas_flash">No Flash</string>
+    <string name="Exo5_Flash_off">Flashlight off</string>
+    <string name="Exo5_Flash_on">Flashlight on</string>
+    <string name="Exo6_title">Proximity sensor</string>
+    <string name="Exo6_pas_prox">The proximity sensor is not present</string>
+    <string name="Exo7_title">Geolocation</string>
+    <string name="Exo7_no_gps">GPS not activated</string>
+    <string name="Exo7_permission_granted">Permission granted</string>
+    <string name="Exo9_title">List of countries</string>
+    <string name="Country_item_text">Country name</string>
+</resources>
