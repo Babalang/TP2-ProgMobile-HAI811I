@@ -8,9 +8,17 @@ import android.widget.Button;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentActivity;
 
-import com.example.tp2.Country.Country;
-import com.example.tp2.Country.Country_Detail_Fragment;
-import com.example.tp2.Country.Country_fragment;
+import com.example.tp2.Exo2.detect_captor;
+import com.example.tp2.Exo3.accelerometer;
+import com.example.tp2.Exo1.ListCaptor;
+import com.example.tp2.Exo4.direction;
+import com.example.tp2.Exo5.lampe;
+import com.example.tp2.Exo6.proximity;
+import com.example.tp2.Exo7.location;
+import com.example.tp2.Part_2.Country;
+import com.example.tp2.Part_2.Country_Detail_Fragment;
+import com.example.tp2.Part_2.Country_fragment;
+import com.example.tp2.Part_2.liste_pays_activite;
 
 public class hub extends FragmentActivity implements Country_fragment.OnCountrySelectedListener {
     @Override
@@ -58,9 +66,7 @@ public class hub extends FragmentActivity implements Country_fragment.OnCountryS
             startActivity(intent);
         });
         Button exo9_button = findViewById(R.id.exo9_button);
-        exo9_button.setOnClickListener(v -> {
-            loadCountryListFragment();
-        });
+        exo9_button.setOnClickListener(v -> loadCountryListFragment());
 
     }
     @Override

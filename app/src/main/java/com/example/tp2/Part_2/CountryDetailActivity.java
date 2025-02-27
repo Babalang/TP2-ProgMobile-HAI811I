@@ -1,4 +1,4 @@
-package com.example.tp2.Country;
+package com.example.tp2.Part_2;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ public class CountryDetailActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.detail_pays);
+        setContentView(R.layout.part_2_2);
 
         // Get data from the Intent
         String countryName = getIntent().getStringExtra("COUNTRY_NAME");

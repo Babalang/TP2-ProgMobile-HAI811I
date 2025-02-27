@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.ACCESS_GPS" />
     <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -26,31 +25,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListCaptor"
+        <activity android:name=".Exo1.ListCaptor"
             android:exported="true">
         </activity>
-        <activity android:name=".detect_captor"
+        <activity android:name=".Exo2.detect_captor"
             android:exported="true">
         </activity>
-        <activity android:name=".accelerometer"
+        <activity android:name=".Exo3.accelerometer"
             android:exported="true">
         </activity>
-        <activity android:name=".direction"
+        <activity android:name=".Exo4.direction"
             android:exported="true">
         </activity>
-        <activity android:name=".lampe"
+        <activity android:name=".Exo5.lampe"
             android:exported="true">
         </activity>
-        <activity android:name=".proximity"
+        <activity android:name=".Exo6.proximity"
             android:exported="true">
         </activity>
-        <activity android:name=".location"
+        <activity android:name=".Exo7.location"
             android:exported="true">
         </activity>
-        <activity android:name=".liste_pays_activite"
+        <activity android:name=".Part_2.liste_pays_activite"
             android:exported="true">
         </activity>
-        <activity android:name=".Country.CountryDetailActivity"
+        <activity android:name=".Part_2.CountryDetailActivity"
             android:exported="true">
         </activity>
 

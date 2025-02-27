@@ -1,32 +1,21 @@
-package com.example.tp2;
-
-import static android.content.ContentValues.TAG;
+package com.example.tp2.Exo6;
 
 import android.app.Activity;
-import android.content.pm.PackageManager;
-import android.graphics.Camera;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.hardware.camera2.CameraAccessException;
-import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.lang.reflect.Parameter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import com.example.tp2.R;
 
 public class proximity extends Activity implements SensorEventListener {
     private SensorManager sensorManager;
     private Sensor proximity;
-    private List<Float> init = new ArrayList<>();
     private LinearLayout layout;
     private ImageView image;
 
@@ -34,7 +23,7 @@ public class proximity extends Activity implements SensorEventListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.accelerometer);
+        setContentView(R.layout.activity_exo3);
         image = findViewById(R.id.image);
         layout = findViewById(R.id.layout);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);

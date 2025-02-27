@@ -1,4 +1,4 @@
-package com.example.tp2.Country;
+package com.example.tp2.Part_2;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,8 +12,6 @@ import androidx.fragment.app.Fragment;
 
 import com.example.tp2.R;
 
-import java.io.Serializable;
-
 public class Country_Detail_Fragment extends Fragment {
 
     private static final String ARG_COUNTRY = "country";
@@ -23,7 +21,7 @@ public class Country_Detail_Fragment extends Fragment {
     public static Country_Detail_Fragment newInstance(Country country) {
         Country_Detail_Fragment fragment = new Country_Detail_Fragment();
         Bundle args = new Bundle();
-        args.putSerializable(ARG_COUNTRY, (Serializable) country);
+        args.putSerializable(ARG_COUNTRY, country);
         fragment.setArguments(args);
         return fragment;
     }
@@ -39,7 +37,7 @@ public class Country_Detail_Fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.detail_pays, container, false);
+        View view = inflater.inflate(R.layout.part_2_2, container, false);
         TextView detailNameTextView = view.findViewById(R.id.title);
         TextView detailCapitalTextView = view.findViewById(R.id.pays);
         TextView detailPopulationTextView = view.findViewById(R.id.population);

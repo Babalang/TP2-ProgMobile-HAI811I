@@ -1,4 +1,4 @@
-package com.example.tp2.Country;
+package com.example.tp2.Part_2;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -18,9 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Country_fragment extends Fragment {
-    private CountryAdapter countryAdapter;
-    private RecyclerView recyclerView;
-    private List<Country> countryList;
     private OnCountrySelectedListener listener;
 
     // Interface for communication with the activity
@@ -34,7 +31,7 @@ public class Country_fragment extends Fragment {
         if (context instanceof OnCountrySelectedListener) {
             listener = (OnCountrySelectedListener) context;
         } else {
-            throw new ClassCastException(context.toString()
+            throw new ClassCastException(context
                     + " must implement OnCountrySelectedListener");
         }
     }
@@ -43,14 +40,14 @@ public class Country_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.liste_pays_activite, container, false);
+        View view = inflater.inflate(R.layout.part_2_1, container, false);
 
         // Initialize RecyclerView and Adapter
-        recyclerView = view.findViewById(R.id.recycler_view);
+        RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
         ((TextView) view.findViewById(R.id.title)).setText(R.string.Exo9_title);
 
         // Sample data (you'd likely load this from a database or network)
-        countryList = new ArrayList<>();
+        List<Country> countryList = new ArrayList<>();
         countryList.add(new Country("France", "Paris", "67,000,000"));
         countryList.add(new Country("Germany", "Berlin", "83,000,000"));
         countryList.add(new Country("Spain", "Madrid", "47,000,000"));
@@ -63,12 +60,10 @@ public class Country_fragment extends Fragment {
         countryList.add(new Country("Brazil", "Brasília", "214,000,000"));
         countryList.add(new Country("India", "New Delhi", "1,380,000,000"));
 
-        countryAdapter = new CountryAdapter(countryList, new CountryAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(Country selectedCountry) {
-                // Handle country click
-                listener.onCountrySelected(selectedCountry);
-            }
+        // Handle country click
+        CountryAdapter countryAdapter = new CountryAdapter(countryList, selectedCountry -> {
+            // Handle country click
+            listener.onCountrySelected(selectedCountry);
         });
 
         recyclerView.setAdapter(countryAdapter);

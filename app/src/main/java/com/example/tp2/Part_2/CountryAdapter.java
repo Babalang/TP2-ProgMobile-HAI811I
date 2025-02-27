@@ -1,4 +1,4 @@
-package com.example.tp2.Country;
+package com.example.tp2.Part_2;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,8 +14,8 @@ import java.util.List;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryViewHolder> {
 
-    private List<Country> countryList;
-    private OnItemClickListener listener;
+    private final List<Country> countryList;
+    private final OnItemClickListener listener;
 
     public CountryAdapter(List<Country> countryList, OnItemClickListener listener) {
         this.countryList = countryList;
@@ -28,8 +28,6 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
 
     public static class CountryViewHolder extends RecyclerView.ViewHolder {
         TextView countryNameTextView;
-        TextView countryCapitalTextView;
-        TextView countryPopulationTextView;
 
         public CountryViewHolder(View itemView) {
             super(itemView);
@@ -52,12 +50,9 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
         //Correct way to access the TextViews
         holder.countryNameTextView.setText(currentCountry.getName());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (listener != null) {
-                    listener.onItemClick(currentCountry);
-                }
+        holder.itemView.setOnClickListener(view -> {
+            if (listener != null) {
+                listener.onItemClick(currentCountry);
             }
         });
     }

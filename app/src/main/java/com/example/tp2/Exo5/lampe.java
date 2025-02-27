@@ -1,11 +1,10 @@
-package com.example.tp2;
+package com.example.tp2.Exo5;
 
 import static android.content.ContentValues.TAG;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.pm.PackageManager;
-import android.graphics.Camera;
-import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -14,20 +13,13 @@ import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.lang.reflect.Parameter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import com.example.tp2.R;
 
 public class lampe extends Activity implements SensorEventListener {
     private SensorManager sensorManager;
     private Sensor accelerometer;
-    private Camera cam = new Camera();
-    private List<Float> init = new ArrayList<>();
-    private LinearLayout layout;
     private CameraManager cameraManager;
     private String cameraId;
     private boolean isFlashlightOn = false;
@@ -38,9 +30,8 @@ public class lampe extends Activity implements SensorEventListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.accelerometer);
+        setContentView(R.layout.activity_exo3);
 
-        layout = findViewById(R.id.layout);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
         TextView titre = findViewById(R.id.title);
@@ -58,7 +49,7 @@ public class lampe extends Activity implements SensorEventListener {
             TextView title = findViewById(R.id.text);
             title.setText(R.string.Exo5_pas_flash);
         } else {
-            cameraManager = (CameraManager) getSystemService(getApplicationContext().CAMERA_SERVICE);
+            cameraManager = (CameraManager) getSystemService(CAMERA_SERVICE);
             try {
                 cameraId = cameraManager.getCameraIdList()[0];
             } catch (CameraAccessException e) {

@@ -1,11 +1,11 @@
-package com.example.tp2.Country;
+package com.example.tp2.Part_2;
 
 import java.io.Serializable;
 // Classe pour stocker les données des pays
 public class Country implements Serializable {
-    private String name;
-    private String capital;
-    private String population;
+    private final String name;
+    private final String capital;
+    private final String population;
 
     public Country(String name, String capital, String population) {
         this.name = name;

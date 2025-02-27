@@ -1,4 +1,4 @@
-package com.example.tp2;
+package com.example.tp2.Exo7;
 
 import android.Manifest;
 import android.app.Activity;
@@ -7,11 +7,12 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
+
+import com.example.tp2.R;
 
 public class location extends Activity implements LocationListener {
     private LocationManager locationManager;
@@ -20,7 +21,7 @@ public class location extends Activity implements LocationListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.accelerometer);
+        setContentView(R.layout.activity_exo3);
 
         text = findViewById(R.id.text);
         TextView titre = findViewById(R.id.title);
@@ -78,20 +79,14 @@ public class location extends Activity implements LocationListener {
                 } else {
                     text.setText(R.string.Exo7_no_gps);
                 }
-                Log.d("Permission", "Permission granted");
             } else {
                 text.setText("Permission denied");
-                Log.d("Permission", "Permission denied");
             }
         }
     }
 
     @Override
-    public void onLocationChanged(Location location) {
-        if (location != null) {
-            text.setText("Latitude: " + location.getLatitude() + "\nLongitude: " + location.getLongitude());
-        } else {
-            text.setText(R.string.Exo7_no_gps);
-        }
+    public void onLocationChanged(@NonNull Location location) {
+        text.setText("Latitude: " + location.getLatitude() + "\nLongitude: " + location.getLongitude());
     }
 }

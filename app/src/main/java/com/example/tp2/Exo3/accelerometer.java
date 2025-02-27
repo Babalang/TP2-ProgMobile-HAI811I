@@ -1,6 +1,4 @@
-package com.example.tp2;
-
-import static android.content.ContentValues.TAG;
+package com.example.tp2.Exo3;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -9,26 +7,21 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.example.tp2.R;
 
 public class accelerometer extends Activity implements SensorEventListener {
     private SensorManager sensorManager;
     private Sensor accelerometer;
-    private List<Float> init = new ArrayList<>();
     private LinearLayout layout;
     private int currentColor = Color.GREEN;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.accelerometer);
+        setContentView(R.layout.activity_exo3);
 
         layout = findViewById(R.id.layout);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -48,18 +41,10 @@ public class accelerometer extends Activity implements SensorEventListener {
         if (event.sensor.getType() == Sensor.TYPE_LINEAR_ACCELERATION) {
             float x, y, z;
             TextView text = findViewById(R.id.text);
-
-            // Extraire uniquement l'accélération due aux mouvements (filtre passe-haut)
             x = event.values[0];
             y = event.values[1];
             z = event.values[2];
-
-            // Calculer la norme de l'accélération
-
             float acceleration = (float) Math.sqrt(x * x + y * y + z * z);
-
-
-            // Changer la couleur selon l'intensité du mouvement
             int newColor;
             if (acceleration > 15) {
                 newColor = Color.RED; // Mouvement très intense

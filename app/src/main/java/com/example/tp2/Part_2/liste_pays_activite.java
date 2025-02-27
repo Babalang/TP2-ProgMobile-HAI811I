@@ -1,4 +1,4 @@
-package com.example.tp2;
+package com.example.tp2.Part_2;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,20 +9,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.example.tp2.Country.Country;
-import com.example.tp2.Country.CountryAdapter;
-import com.example.tp2.Country.CountryDetailActivity;
+import com.example.tp2.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class liste_pays_activite extends Activity {
 
-    private CountryAdapter countryAdapter;
-    private RecyclerView recyclerView;
-
     // Sample data (you'd likely load this from a database or network)
-    private List<Country> countryList = new ArrayList<>() {{
+    private final List<Country> countryList = new ArrayList<>() {{
         add(new Country("France", "Paris", "67,000,000"));
         add(new Country("Germany", "Berlin", "83,000,000"));
         add(new Country("Spain", "Madrid", "47,000,000"));
@@ -39,22 +34,20 @@ public class liste_pays_activite extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.liste_pays_activite);
+        setContentView(R.layout.part_2_1);
         ((TextView) findViewById(R.id.title)).setText("Liste des pays");
 
         // Initialize RecyclerView and Adapter
-        recyclerView = findViewById(R.id.recycler_view);
-        countryAdapter = new CountryAdapter(countryList, new CountryAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(Country selectedCountry) {
-                // Handle country click
-                Log.i("MainActivity", "Click on " + selectedCountry.getName());
-                Intent intent = new Intent(liste_pays_activite.this, CountryDetailActivity.class);
-                intent.putExtra("COUNTRY_NAME", selectedCountry.getName());
-                intent.putExtra("COUNTRY_CAPITAL", selectedCountry.getCapital());
-                intent.putExtra("COUNTRY_POPULATION", selectedCountry.getPopulation());
-                startActivity(intent);
-            }
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        // Handle country click
+        CountryAdapter countryAdapter = new CountryAdapter(countryList, selectedCountry -> {
+            // Handle country click
+            Log.i("MainActivity", "Click on " + selectedCountry.getName());
+            Intent intent = new Intent(liste_pays_activite.this, CountryDetailActivity.class);
+            intent.putExtra("COUNTRY_NAME", selectedCountry.getName());
+            intent.putExtra("COUNTRY_CAPITAL", selectedCountry.getCapital());
+            intent.putExtra("COUNTRY_POPULATION", selectedCountry.getPopulation());
+            startActivity(intent);
         });
 
         recyclerView.setAdapter(countryAdapter);
